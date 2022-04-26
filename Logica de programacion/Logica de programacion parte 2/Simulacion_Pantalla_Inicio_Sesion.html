@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA PANTALLA DE INICIO DE SESION</h1>
+
+<script>
+
+	function saltarLinea() {
+		
+		document.write("<br>");
+
+
+	}
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    var inicioDeSesionIngresado;
+    var contrasenhaIngresada;
+
+    for (var intentos = 1; intentos <= 3; intentos++) {
+
+    	inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    	contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+    	if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+        	alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+        	break;
+    	} else {
+        	alert("inicio de sesión inválido. Favor intente de nuevo");
+    		}
+    }
+
+    imprimir("Fin...");
+    
+</script>
